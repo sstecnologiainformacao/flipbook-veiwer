@@ -51,7 +51,7 @@ body {
   }
 
   .page.page-cover {
-    @apply bg-transparent text-white;
+    @apply bg-transparent;
     background: transparent !important;
   }
 

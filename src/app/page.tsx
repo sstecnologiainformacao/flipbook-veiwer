@@ -9,19 +9,6 @@ type PageProps = {
   number?: number;
 };
 
-// Capa (frente e verso)
-const PageCover = forwardRef<HTMLDivElement, PageProps>(({ children }, ref) => {
-  return (
-    <div className="page page-cover" ref={ref as React.RefObject<HTMLDivElement>} data-density="hard">
-      <div className="page-content" style={{ position: 'relative', width: '100%', height: '100%' }}>
-        {children}
-      </div>
-    </div>
-  );
-});
-
-PageCover.displayName = "PageCover";
-
 // Página interna
 const Page = forwardRef<HTMLDivElement, PageProps>(({ children, number }, ref) => {
   return (
@@ -66,12 +53,7 @@ export default function Home() {
       <HTMLFlipBook
         width={479}
         height={600}
-        size="stretch"
         onFlip={onFlip}
-        minWidth={479}
-        maxWidth={479}
-        minHeight={600}
-        maxHeight={600}
         {...({} as any)}
       >
         {pages}
