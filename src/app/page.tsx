@@ -72,6 +72,7 @@ export default function Home() {
         maxWidth={479}
         minHeight={600}
         maxHeight={600}
+        {...({} as any)}
       >
         {pages}
       </HTMLFlipBook>
